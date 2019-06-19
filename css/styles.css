@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+  height: 100vh;
+  background-color: #d9d9d9;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 100%;
+  max-width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin: 30px auto;
+}
+
+header#main-header {
+  background: linear-gradient(to right, #4dd2d2, #092331);
+  height: 120px;
+  border-bottom: 1px solid #ddd;
+}
+
+header#main-header .header-content {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+  height: 120px;
+  /* padding: 0 30px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header#main-header .header-content .menu {
+  color: #fff;
+  text-transform: uppercase;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+header#main-header .header-content .menu .menu-item {
+  padding: 0 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+  background: #f0f1ef;
+}
+
+.card.active {
+  background: #092432;
+}
+
+.avatar {
+  margin: 30px;
+}
+
+.avatar img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+.card-content {
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+}
+
+.card-content .staff span:not(:last-child) {
+  padding-bottom: 10px;
+}
+
+.card-content .staff-fields {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  text-align: right;
+  color: #707070;
+}
+
+.card-content .staff-values {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px;
+  color: #092432;
+  font-weight: bolder;
+}
+
+.staffs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}
+
+.staffs .card .card-content {
+  display: block;
+}
+
+.staffs .card .avatar {
+  position: relative;
+}
+
+.staffs .card .avatar .badge {
+  position: absolute;
+  background: #4dd2d2;
+  color: #092432;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-weight: bolder;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 24px;
+  right: 0;
+}
+.staffs .card .card-content .nome {
+  font-weight: bolder;
+  color: #092432;
+}
+
+.staffs .card .card-content .cargo {
+  color: #707070;
+  font-size: 16px;
+}
+
+.staffs .card.active .card-content div {
+  color: #fff;
+}
